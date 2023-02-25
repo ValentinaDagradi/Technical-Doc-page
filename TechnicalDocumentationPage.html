@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS basics</title>
+	<link rel="stylesheet" type="text/css" href="TechnicalDocumentationPage.css">
+	<link href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap" rel="stylesheet"/>
+</head>
+<body>
+	<nav id="navbar">
+		<header class="nav-header">CSS basics</header>
+		<hr>
+		<li><a href=#introduction class="nav-link">Introduction</a></li>
+		<hr>
+		<li><a href=#anatomy_of_a_css_ruleset class="nav-link">Anatomy of a CSS ruleset</a></li>
+		<hr>
+		<li><a href=#css-all-about-boxes class="nav-link">CSS: all about boxes</a></li>
+		<hr>
+		<li><a href=#changing_the_background class="nav-link">Changing the background</a></li>
+		<hr>
+		<li><a href=#styling_the_body class="nav-link">Styling the body</a></li>
+		<hr>
+	</nav>
+	<main id="main-doc">
+		<section class="main-section" id="introduction">
+			<header class="subtitle">Introduction</header>
+			<p>CSS (Cascading Style Sheets) is the code that styles web content. Like HTML, CSS is not a programming language. It's not a markup language either. CSS is a style sheet language. CSS is what you use to selectively style HTML elements.</p>
+			<p>CSS saves a lot of work, since it can control the layout of multiple web pages all at once. External stylesheets are stored in CSS files</p>
+		</section>
+		<section class="main-section" id="anatomy_of_a_css_ruleset">
+			<header class="subtitle">Anatomy of a CSS ruleset</header>
+			<p>The whole structure is called a ruleset. (The term ruleset is often referred to as just rule.)</p>
+			<img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png">
+			<ul>Note the names of the individual parts:</ul>
+			<li><strong>Selector:</strong> This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled. To style a different element, change the selector.</li>
+		    <li><strong>Declaration</strong> This is a single rule like <code>color: red;</code>. It specifies which of the element's properties you want to style.</li>
+			<li><strong>Porperties</strong> These are ways in which you can style an HTML element. In CSS, you choose which properties you want to affect in the rule.</li>
+			<li><strong>Poperty value</strong> To the right of the property—after the colon—there is the property value. This chooses one out of many possible appearances for a given property. (For example, there are many color values in addition to red.)</li>
+			<p>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</p>
+		</section>
+		<section class="main-section" id="css-all-about-boxes">
+			<header class="subtitle">CSS: all about boxes</header>
+			<p>Something you'll notice about writing CSS: a lot of it is about boxes. This includes setting size, color, and position. Most HTML elements on your page can be thought of as boxes sitting on top of other boxes.</p>
+			<p>The CSS box model is essentially a box that wraps around every HTML element.</p>
+			<ul>CSS layout is mostly based on the box model. Each box taking up space on your page has properties like:</ul>
+			<li><code>padding</code>,the space around the content. In the example below, it is the space around the paragraph text.</li>
+			<li><code>border</code>, the solid line that is just outside the padding.</li>
+			<li><code>margin</code>, the space around the outside of the border.</li>
+		</section>
+		<section class="main-section" id="changing_the_background">
+			<header class="subtitle">Changing the background</header>
+			<p>This rule sets a background plain color for the entire page background:</p>
+			<div>
+			    <code>html {
+			    <br>background-color: #00539f;
+		        <br>}</code>
+		    </div>
+			<p>With CSS, a color is most often specified by a valid color name (like <code>red</code>), a HEX value (like <code>#ff0000</code>) or an RGB value (like <code>rgb(255,0,0)</code></p>
+			<br>
+            <p>The background-image property specifies an image to use as the background of an element:</p>
+            <div>
+				<code> body {
+				  <br>background-image: url("paper.gif");
+                  <br>}
+               </code>
+            </div>
+            <p>By default, the image is repeated so it covers the entire element.</p>
+		</section>
+		<section class="main-section" id="styling_the_body">
+			<header class="subtitle">Styling the body</header>
+			<p>There are several declarations for the &ltbody&gt element. </p>
+			<div>
+				<code>body {
+				<br>width: 600px;
+				<br>margin: 0 auto;
+				<br>background-color: #ff9500;
+		        <br>}</code>
+		    </div>
+			<ul>Let's go through these line-by-line:</ul>
+			<li><code>width: 600px;</code> This forces the body to always be 600 pixels wide.</li>
+			<li><code>margin: 0 auto;</code> When you set two values on a property like margin or padding, the first value affects the element's top and bottom side (setting it to 0 in this case); the second value affects the left and right side. (Here, auto is a special value that divides the available horizontal space evenly between left and right). You can also use one, two, three, or four values</li>
+			<li><code>background-color: #FF9500;</code> This sets the element's background color. This project uses a reddish orange for the body background color, as opposed to dark blue for the &lthtml&gt element. (Feel free to experiment.)</li>
+		</section>
+	</main>
+	<footer>All the documentation in this page was taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" type="_blank">MDN</a> and <a href="https://www.w3schools.com/css/css_intro.asp" type="_blank">W3Schools</a></footer>
+</body>
+</html>
